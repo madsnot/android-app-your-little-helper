@@ -15,16 +15,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<String> textMenuButton = ["Plans", "Ration", "Diary", "Notice"];
-  List<String> pages = [
-    "EditPage",
-    "SettingsPage",
-    "ReferencePage",
-    "PlansPage",
-    "RationPage",
-    "DiaryPage",
-    "NoticePage"
-  ];
-  final String _avatarImage = "avatar1.jpeg";
   final user = UserPreferences.myUser;
 
   ButtonStyle get styleMenu => ElevatedButton.styleFrom(
@@ -43,10 +33,10 @@ class _HomePageState extends State<HomePage> {
         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
       );
 
-  Widget buildMenuButton(int i) => ElevatedButton(
+  Widget buildMenuButton(int index) => ElevatedButton(
         style: styleMenu,
         onPressed: () {},
-        child: Text(textMenuButton[i]),
+        child: Text(textMenuButton[index]),
       );
 
   @override
